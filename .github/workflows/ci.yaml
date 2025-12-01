@@ -53,7 +53,7 @@ jobs:
 
       - name: Upload screenshots
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: selenium-screenshots-${{ matrix.browser }}
           path: screenshots/
@@ -61,7 +61,8 @@ jobs:
 
       - name: Upload HTML Report
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
+
         with:
           name: html-report-${{ matrix.browser }}
           path: report-${{ matrix.browser }}.html

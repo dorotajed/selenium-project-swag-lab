@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/upload-artifact@v4
+        uses: actions/checkout@v4
 
 
       - name: Set up Python ${{ matrix.python-version }}
@@ -66,3 +66,4 @@ jobs:
         with:
           name: html-report-${{ matrix.browser }}
           path: report-${{ matrix.browser }}.html
+          if-no-files-found: ignore
